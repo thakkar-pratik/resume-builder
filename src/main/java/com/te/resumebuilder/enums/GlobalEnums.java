@@ -10,4 +10,12 @@ public interface GlobalEnums {
 	
 	public static final String PROFILE_NOT_SAVED = "profile is not saved please try again later";
 
+	public static final String INVALID_LOGIN = "Invalid login for username";
+	
+	public static final String USER_NOT_FOUND = "User not found";
+	
+	public static final String USER_NOT_SAVED = "User cannot be registered now please try again later";
+	
+	
+
 }

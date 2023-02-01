@@ -9,4 +9,6 @@ public interface AdminService {
 
 	List<ProfileDto> getAllProfiles();
 
+	String deleteProfileData(Integer profileid);
+
 }

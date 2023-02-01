@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.te.resumebuilder.entity.NewUser;
+
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,7 +28,7 @@ public class ProfileDto {
 	private String userTotalExperience; 
 	
 	private String relevantExperience;
-	
+		
 	
 //	===========================================================
 	
@@ -39,6 +42,8 @@ public class ProfileDto {
 	private List<ProjectDetailsDto> projectDetails;
 
 	private SkillsDto skills;
+	
+//	private NewUserDto newUser;
 
 
 }

@@ -39,9 +39,6 @@ public class Profile {
 	@Column(name = "last_name", nullable = false)
 	private String userLastName;
 	
-//	@Column(name = "email_id",nullable = false)
-//	private String emailId;
-	
 	@ElementCollection
 	@CollectionTable(name = "profile_technologies", joinColumns = @JoinColumn(name="profile_id"))
 	@Column(name = "technologies")
@@ -52,7 +49,7 @@ public class Profile {
 	
 	@Column(name = "relevant_experience")
 	private String relevantExperience;
-	
+
 //	===========================================================
 	
 	@OneToMany(cascade = CascadeType.ALL)
@@ -69,5 +66,11 @@ public class Profile {
 	
 	@OneToOne(mappedBy = "profile",cascade = CascadeType.ALL)
 	private Skills skills;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="user_email")
+	private NewUser newUser;
+	
+	
 	
 }

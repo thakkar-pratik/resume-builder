@@ -40,4 +40,11 @@ public class AdminServiceImpl implements AdminService, GlobalEnums {
 		}
 	}
 
+	@Override
+	public String deleteProfileData(Integer profileid) {
+		profileRepository.findById(profileid).orElseThrow(()-> new ProfileException(PROFILE_NOT_FOUND));
+		profileRepository.deleteById(profileid);
+		return "Profile Deleted";
+	}
+
 }
